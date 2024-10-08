@@ -1,0 +1,483 @@
+/* Basic reset for html and body */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&display=swap');
+
+
+
+html, body {
+  height: 100%;
+  margin: 0;
+  background-image: url("C:\Users\Miguel\Desktop\Lifelabs quarter 1\plates.jpeg"); /* Replace with your image path */
+  background-size: cover; /* This makes the image cover the entire background */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+}
+
+/* Flexbox wrapper to push footer to bottom */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Full viewport height */
+}
+
+/* Main content area */
+main {
+  flex: 1; /* Pushes footer to the bottom */
+  max-width: 800px; /* or your preferred max width */
+  margin: auto; /* centers the content */
+  padding: 20px; /* adds padding around the content */
+  font-family: "Quicksand", sans-serif; /* sets a cleaner font */
+  margin-top: 80px; /* Adjust this value based on your header’s height */
+  margin-bottom: 0; /* Reset bottom margin for proper footer alignment */
+}
+
+/* Center the text inside h1 */
+h1 {
+  text-align: center;
+}
+
+/* Styles for the fixed header */
+.fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #478468; /* Set a color here */  
+  padding: 20px;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px; /* Adjust this value as needed */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Adds a subtle shadow */
+}
+
+/* Styles for the navigation links */
+.navigation-links,
+.right-side-element {
+  display: flex;
+  align-items: center; /* Align links vertically */
+}
+
+.navigation-links a,
+.right-side-element a {
+  color: white;
+  text-decoration: none;
+  font-size: 24px; /* Set a specific font size */
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-weight: 700;
+  margin: 0 10px; /* Add equal margin around each link */
+  padding: 8px 15px; /* Add padding to increase clickable area */
+  border-radius: 5px;
+  transition: color 0.5s ease;
+}
+
+/* Updated styles for selected link */
+.navigation-links a.active,
+.navigation-links a:hover,
+.right-side-element a.active,
+.right-side-element a:hover {
+  color: rgb(211, 90, 90);
+}
+
+/* Right-side element styling */
+.right-side-element {
+  margin-right: 50px; /* Adjust this value as needed */
+  background-color: rgba(19, 63, 57, 0.8); /* Semi-transparent background */
+  padding: 8px 12px; /* Padding for better spacing */
+  border-radius: 12px; /* Increased rounding */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+  transition: background-color 0.3s ease; /* Smooth transition for hover */
+}
+
+/* Change the background color on hover */
+.right-side-element:hover {
+  background-color: rgba(19, 63, 57, 1); /* Solid background on hover */
+}
+
+/* Styles for the search bar */
+.search-bar {
+  display: flex;
+  align-items: center;
+}
+
+#search-input {
+  padding: 5px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 10px; /* Add margin to the right of the input field */
+  width: 200px;
+}
+
+.search-bar button {
+  padding: 6px 12px;
+  background-color: #de3952;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.search-bar button:hover {
+  background-color: #fc3e04;
+  transform: scale(1.05);
+}
+
+/* Style the button */
+#backToTopBtn {
+  
+  position: fixed; /* Fixed at the bottom-right corner */
+  bottom: 20px;
+  right: 20px;
+  z-index: 99; /* On top of other elements */
+  border: none;
+  outline: none;
+  background-color: #555;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 5px;
+  opacity: 0; /* Initial opacity */
+  visibility: hidden; /* Hidden initially */
+  transition: opacity 0.5s ease, visibility 0.5s ease; /* Slower fade in/out effect */
+ 
+}
+
+#backToTopBtn.show {
+  opacity: 1; /* Full opacity */
+  visibility: visible; /* Make it visible */
+}
+
+#backToTopBtn:hover {
+  background-color: #333; /* Darker background on hover */
+}
+
+/* Footer styles */
+/* Footer styles */
+.footer {
+  background-color: #343a40; /* Dark background color */
+  color: #ffffff; /* White text color */
+  padding: 20px 0; /* Add padding as needed */
+  position: relative;
+  width: 100%; /* Ensure footer spans the full width */
+  bottom: 0; /* Stick to the bottom if needed */
+}
+
+/* Center the container inside the footer */
+.footer .container {
+  max-width: 1140px; /* Set a max width for the content inside */
+  margin: 0 auto; /* Center the container */
+}
+
+.footer .row {
+  margin-left: 0; /* Remove default left margin */
+  margin-right: 0; /* Remove default right margin */
+}
+
+.footer .col-md-3 {
+  margin-bottom: 20px; /* Add spacing between columns */
+}
+
+.footer .btn-social {
+  border: 1px solid #ffffff; /* White border for social buttons */
+  color: #ffffff; /* White icon color */
+}
+
+.footer .btn-social:hover {
+  background-color: #ffffff; /* White background on hover */
+}
+
+
+/* Center the text inside h1 */
+h1 {
+  text-align: center;
+}
+
+/* Style for active navigation link */
+.active {
+  color: orange; /* Highlight color */
+  font-weight: bold; /* Optional: makes the text bold */
+}
+
+/* Styles for the dropdown container */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none; /* Hidden by default */
+  opacity: 0; /* Start invisible */
+  visibility: hidden; /* Initially hidden */
+  transition: opacity 0.3s ease 2s, visibility 0s 2s; /* Delay visibility change */
+  position: absolute; /* Positioned relative to the dropdown */
+  background-color: #ffffff; /* Background for clarity */
+  min-width: 120px; /* Minimum width for the dropdown */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  z-index: 1; /* Ensure it appears above other elements */
+  border: 1px solid #ccc; /* Outline for the parent dropdown */
+  border-radius: 4px; /* Rounded corners */
+  width: 130px;
+}
+
+/* Style for dropdown links */
+.dropdown-content a {
+  color: #333; /* Dark gray text color */
+  padding: 8px 12px; /* Reduced padding for a smaller menu */
+  text-decoration: none; /* Remove underline */
+  display: flex; /* Use flexbox for consistent sizing */
+  justify-content: space-between; /* Space between text and number */
+  font-size: 12px; /* Smaller font size */
+  transition: background-color 0.3s ease; /* Smooth background transition */
+}
+
+.dropdown:hover .dropdown-content {
+  display: block; /* Show the dropdown */
+  opacity: 1; /* Fade in */
+  visibility: visible; /* Make it visible */
+}
+
+/* Change the background color of the links on hover */
+.dropdown-content a:hover {
+  background-color: #f0f0f0; /* Light gray background on hover */
+  color: #000; /* Darker text color on hover */
+}
+
+/* Add some transition to the dropdown itself for a smoother effect */
+.dropdown-content {
+  opacity: 0; /* Start invisible */
+  visibility: hidden; /* Initially hidden */
+  transition: opacity 0.3s ease, visibility 0.3s ease; /* Transition for smooth appearance */
+}
+
+.dropdown:hover .dropdown-content {
+  opacity: 1; /* Fade in */
+  visibility: visible; /* Make it visible */
+}
+
+
+
+
+/* Mind map image styles */
+.mindmap {
+  width: 100%; /* makes the images responsive */
+  max-width: 600px; /* set max width to avoid excessive sizes */
+  height: auto; /* maintains aspect ratio */
+  margin: 10px 0; /* adds vertical space around images */
+}
+
+/* Text styles */
+h1, h2, h6 {
+  margin-top: 20px; /* consistent top margin for headers */
+  margin-bottom: 10px; /* bottom margin for spacing */
+}
+
+p {
+  margin-bottom: 15px; /* adds space between paragraphs */
+  line-height: 1.6; /* improves readability */
+}
+
+.container img {
+  width: 25%; /* Make the image take full width of its container */
+  height: auto; /* Maintains the aspect ratio */
+}
+
+.quicksand-text {
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400; /* Adjust the weight as needed */
+  font-style: normal;
+}
+
+.wider {
+  width: 80%; /* Adjust this value as needed */
+  height: auto; /* Maintains aspect ratio */
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0; /* Remove default padding */
+  margin: 0;  /* Remove default margin */
+}
+
+nav > ul > li {
+  position: relative;
+  display: inline-block;
+  margin-right: 20px; /* Space between main menu items */
+}
+
+.nested-dropdown {
+  display: none; /* Hide the nested dropdowns initially */
+  position: absolute; /* Position them absolutely */
+  background-color: #fff;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+   left: 100%; /* Shift to the right of the parent */
+  top: 10px; /* Adjust this to control vertical position, slightly below the parent */
+}
+
+nav ul li:hover > .nested-dropdown {
+  display: block; /* Show the nested dropdown on hover */
+}
+
+/* Optional: Add styles for links */
+nav a {
+  text-decoration: none;
+  color: #000; /* Link color */
+  padding: 10px; /* Padding around links */
+  display: block; /* Make links fill the space */
+}
+
+.nested-dropdown a:hover {
+  background-color: #f0f0f0; /* Change background on hover */
+}
+
+/* Child Dropdown */
+.child-dropdown {
+  display: none; /* Hidden by default */
+  position: absolute; /* Allows it to appear as a dropdown */
+  top: 10px; /* Align to the top of the parent */
+  left: 100%; /* Position to the right of the parent */
+  background-color: #fff; /* For visibility */
+  border: 1px solid #ccc; /* Outline for the child dropdown */
+  border-radius: 4px; /* Optional: rounded corners */
+  z-index: 1; /* Ensure it appears on top */
+  opacity: 0; /* Start invisible */
+  visibility: hidden; /* Initially hidden */
+  width: 167px; /* or any other value to include the necessary space */
+  
+}
+
+/* Show child dropdown when hovering over the parent item */
+.dropdown-content li:hover > .child-dropdown {
+  display: block; /* Show child dropdown */
+  opacity: 1; /* Fade in */
+  visibility: visible; /* Make it visible */
+  transition:  3s ease,
+ 
+}
+
+/* Change background color of the links on hover */
+.dropdown-content a:hover,
+.child-dropdown a:hover {
+  background-color: #f0f0f0; /* Light gray background on hover */
+  color: #000; /* Darker text color on hover */
+}
+
+.image-container {
+  text-align: center; /* Center the content horizontally */
+}
+img {
+  max-width: 100%; /* Ensure the image scales responsively */
+  height: auto; /* Maintain aspect ratio */
+
+}
+
+.dropdown-content {
+  display: none; /* Hidden by default */
+  opacity: 0; /* Start invisible */
+  visibility: hidden; /* Initially hidden */
+  transform: translateY(-10px); /* Move dropdown slightly up */
+  transition: opacity 0.3s ease, visibility 0s 0.3s, transform 0.3s ease; /* Smooth transition for opacity and transform */
+}
+
+/* Show the dropdown with delay on hover */
+.dropdown:hover .dropdown-content {
+  display: block; /* Show the dropdown */
+  opacity: 1; /* Fade in */
+  visibility: visible; /* Make it visible */
+  transform: translateY(0); /* Slide down to original position */
+  transition-delay: 0s; /* Remove the delay on hover */
+}
+
+/* Optional: When leaving the dropdown, add transition for hiding */
+.dropdown-content {
+  transition: opacity 0.3s ease, visibility 0s 0.3s, transform 0.3s ease;
+}
+
+/* Ensuring the dropdown hides after the opacity transition */
+.dropdown-content.hide {
+  opacity: 0; /* Fade out */
+  visibility: hidden; /* Hide */
+  transform: translateY(-10px); /* Slide up */
+}
+
+
+
+/* Responsive styles for tablet screens and smaller */
+@media (max-width: 1024px) {
+  .fixed-header {
+      padding: 15px; /* Reduce padding to fit smaller screens */
+      flex-direction: column; /* Stack elements vertically */
+      align-items: flex-start; /* Align items to the left */
+  }
+
+  .navigation-links {
+      margin-top: 10px; /* Add some spacing between elements */
+      display: flex;
+      flex-wrap: wrap; /* Allow links to wrap to the next line */
+      justify-content: flex-start; /* Align links to the left */
+  }
+
+  .navigation-links a {
+      margin: 5px; /* Adjust margin between links */
+      font-size: 18px; /* Reduce font size for better fit */
+  }
+  .right-side-element {
+    display: none; /* Completely hides the search bar */
+  } .search-bar {
+    display: none; /* Completely hides the search bar */
+}
+  .search-bar {
+    display: none; /* Completely hides the search bar */
+}
+#backToTopBtn {
+  display: block; /* Ensure the button is always displayed */
+  opacity: 1; /* Set to visible state */
+  visibility: visible; /* Make it visible */
+}
+}
+
+
+/* Responsive styles for mobile screens */
+@media (max-width: 600px) {
+
+
+
+
+
+  .fixed-header {
+      padding: 10px; /* Further reduce padding for smaller screens */
+  }
+
+  .navigation-links a {
+      font-size: 16px; /* Even smaller font size for mobile */
+      padding: 5px 10px; /* Adjust padding for a smaller clickable area */
+
+    }
+  }
+
+  .right-side-element {
+    font-size: 16px; /* Even smaller font size for mobile */
+    padding: 0px 5px; /* Adjust padding for a smaller clickable area */
+
+
+
+
+  } .search-bar {
+    display: none; /* Completely hides the search bar */
+}
+
+#backToTopBtn {
+  display: block; /* Ensure the button is always displayed */
+  opacity: 1; /* Set to visible state */
+  visibility: visible; /* Make it visible */
+}
+
+
+.audio-container {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+  text-align: center; /* Center text if needed */
+  margin-top: 20px; /* Add space above the audio element */
+}
